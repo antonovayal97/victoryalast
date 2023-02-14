@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="70" height="26" transform="matrix(-1 0 0 1 75 48)" stroke="" stroke-width="2"/>
+<path d="M27 6H53V25H27V6Z" stroke="" stroke-width="2"/>
+<path d="M32 31.723V26C32 25.4477 32.4477 25 33 25H47C47.5523 25 48 25.4477 48 26V31.723C48 31.9043 48.0493 32.0821 48.1425 32.2375L50.0913 35.4855C50.4912 36.152 50.0111 37 49.2338 37H30.7662C29.9889 37 29.5088 36.152 29.9087 35.4855L31.8575 32.2375C31.9507 32.0821 32 31.9043 32 31.723Z" stroke="" stroke-width="2"/>
+<path d="M5 9H27V25H5V9Z" stroke="" stroke-width="2"/>
+<path d="M28 73V48" stroke="" stroke-width="2"/>
+<path d="M21 74V48" stroke="" stroke-width="2"/>
+<path d="M52 73L52 48" stroke="" stroke-width="2"/>
+<path d="M53 16H27" stroke="" stroke-width="2"/>
+<path d="M28 56L75 56" stroke="" stroke-width="2"/>
+<path d="M18 21H14" stroke="" stroke-width="2"/>
+<path d="M42 21H38" stroke="" stroke-width="2"/>
+<path d="M42 12H38" stroke="" stroke-width="2"/>
+<path d="M66 21H62" stroke="" stroke-width="2"/>
+<path d="M53 9H75V25H53V9Z" stroke="" stroke-width="2"/>
+<path d="M38 52H42" stroke="" stroke-width="2"/>
+<path d="M38 60H42" stroke="" stroke-width="2"/>
+<path d="M62 52H66" stroke="" stroke-width="2"/>
+<path d="M62 60H66" stroke="" stroke-width="2"/>
+<path d="M38 68H42" stroke="" stroke-width="2"/>
+<path d="M62 68H66" stroke="" stroke-width="2"/>
+<path d="M17 56V52" stroke="" stroke-width="2"/>
+<path d="M28 64L75 64" stroke="" stroke-width="2"/>
+</svg>

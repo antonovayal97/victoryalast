@@ -1,0 +1,10 @@
+mixin linkTabs(tabs = [{name: 'link',active: true}])
+  .link-tabs-wrap
+    ul
+      each tab in tabs
+        li
+          if tab.active
+            span.link-tabs-active-tab=tab.name
+          else
+            a(href="#")
+              span=tab.name

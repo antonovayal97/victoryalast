@@ -1,0 +1,21 @@
+.main-banner
+  .swiper.main-banner-swiper
+    .swiper-wrapper.main-banner-swiper-wrapper
+      each ban in [1,2,3,4]
+        .swiper-slide
+          .banner
+            .banner-img
+              img(src="./img/mainbanner.png")
+            .banner-text-wrap
+              .banner-text
+                span Распродажа мебели
+              .banner-text
+                span Скидка до 50%
+              .banner-link
+                a(href="#")
+                  span Подробнее
+    .swiper-pagination.main-banner-swiper-pagination.victorya-pagination
+    .swiper-button-next.main-banner-swiper-buttons-next
+      +icon('carousel_nav')
+    .swiper-button-prev.main-banner-swiper-buttons-prev
+      +icon('carousel_nav')

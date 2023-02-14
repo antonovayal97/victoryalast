@@ -1,0 +1,22 @@
+.catalog-types
+  .swiper.type-swiper
+    .swiper-wrapper.type-swiper-wrapper
+      each jj, index in [{name: 'Гостиные',img: 'Гостиные'},{name: 'Комоды',img: 'Комоды'},{name: 'Полки',img: 'Полки'},{name: 'Столики',img: 'Столики'},{name: 'Тумбы',img: 'Тумбы'},{name: 'Тумбы под ТВ',img: 'ТумбыподТВ'},{name: 'Шкафы',img: 'Шкафы'},{name: 'Кресла-качалки',img: 'Кресла-качалки'},{name: 'Камины',img: 'Камины'}]
+        .swiper-slide.type-slide
+          if index == 0
+            a(href="#").type.type-active
+              .type-img
+                object(type="image/svg+xml" data="img/Мебель для гостиной/" + jj.img + ".svg")
+              .type-name
+                span=jj.name
+              .type-count
+                span=jj.count
+          else
+            a(href="#").type
+              .type-img
+                object(type="image/svg+xml" data="img/Мебель для гостиной/" + jj.img + ".svg")
+              .type-name
+                span=jj.name
+              .type-count
+                span=jj.count
+  .type-progressbar.swiper-pagination

@@ -1,0 +1,18 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    include ../chunk/main-banner/main-banner
+    .card-swiper
+      .card-swiper-name
+        h2 Рекомендуем
+      .index-card
+        +cardSwiper
+    .card-swiper
+      .card-swiper-name
+        h2 Новинки
+      .index-card
+        +cardSwiper
+    include ../chunk/pred/pred
+    include ../chunk/best/best
+  include ../chunk/components/footer

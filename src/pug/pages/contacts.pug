@@ -1,0 +1,41 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Контакты')
+    .page-head
+      h1 Контакты
+    .contacts-wrap
+      .contacts-map
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/viktoriya/109854690915/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Виктория</a><a href="https://yandex.ru/maps/74/yakutsk/category/furniture_store/184107871/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Магазин мебели в Якутске</a><a href="https://yandex.ru/maps/74/yakutsk/category/custom_made_furniture/184107879/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Мебель на заказ в Якутске</a><iframe src="https://yandex.ru/map-widget/v1/?ll=129.690725%2C61.999703&mode=search&oid=109854690915&ol=biz&z=16.07" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+      .contacts-infos
+        .contacts-infos-first
+          .contacts-infos-head
+            span Мебельный центр «
+            span.contacts-infos-green Виктория
+            span »
+          .contacts-infos-wrap
+            .contacts-infos-main
+              span ул. Автодорожная, 7
+              span Ежедневно с 10:00 до 19:00
+            .contacts-infos-low
+              .contacts-infos-low-k
+                span Мебель для дома +7 914 2 714 042
+                span Мебель для кухни +7 914 2 717 021
+              .contacts-infos-low-k
+                span Мягкая мебель +7 914 2 730 233
+                span Мебель для офиса +7 914 2 716 582
+        .contacts-infos-second
+          .contacts-infos-head
+            span Пункт выдачи
+            span.contacts-infos-green  самовывоза
+          .contacts-infos-wrap.contacts-infos-wrap-g77
+            .contacts-infos-main
+              span ул. Автодорожная, 7
+            .contacts-infos-low.contacts-infos-wrap-g77
+              .contacts-infos-low-k
+                span Пн – пт 08:30 – 17:30
+                span Сб 09:00 – 17:00
+              .contacts-infos-low-k
+                span Вс – выходной
+  include ../chunk/components/footer

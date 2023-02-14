@@ -1,0 +1,214 @@
+extends app
+block page
+  include ../chunk/components/header
+  main.index-main
+    .filter-menu
+      .filter-menu-top
+        .filter-menu-name
+          span Фильтр
+        .filter-menu-close
+          +icon('closemenu')
+      .filter-menu-top-line
+      .filter-menu-wrap
+        .filter-menu-filter
+          .filter-menu-filter-name
+            span Цена
+          .filter-menu-filter-input-wrap
+            .filter-menu-filter-input
+              .filter-menu-filter-input-name
+                span От
+              input(type="number" min="0" max="500000" value="5000").filter-menu-filter-input-input.lower-input
+            .filter-menu-filter-input
+              .filter-menu-filter-input-name
+                span До
+              input(type="number" min="0" max="500000" value="450000").filter-menu-filter-input-input.upper-input
+          .filter-menu-filter-range.multi-range
+            input(type="range" min="0" max="500000" value="5000" class="lower")
+            input(type="range" min="0" max="500000" value="450000" class="upper")
+        .filter-menu-accords
+          .filter-menu-accords-wrap
+            .filter-menu-accords-accord.accord
+              .filter-menu-accords-accord-outside.accord-outside
+                .filter-menu-accords-accord-name
+                  span Коллекции
+                .filter-menu-accords-accord-arrow.accord-arrow
+                  +icon('acc_arrow')
+              .filter-menu-accords-accord-inside.accord-inside
+                p Коллекции
+            .filter-menu-accords-accord.accord
+              .filter-menu-accords-accord-outside.accord-outside
+                .filter-menu-accords-accord-name
+                  span Габариты
+                .filter-menu-accords-accord-arrow.accord-arrow
+                  +icon('acc_arrow')
+              .filter-menu-accords-accord-inside.accord-inside
+                p Габариты
+            .filter-menu-accords-accord.accord
+              .filter-menu-accords-accord-outside.accord-outside
+                .filter-menu-accords-accord-name
+                  span Цвет
+                .filter-menu-accords-accord-arrow.accord-arrow
+                  +icon('acc_arrow')
+              .filter-menu-accords-accord-inside.accord-inside
+                p Цвет
+        .filter-menu-btns
+          .filter-menu-btns-wrap
+            a(href="#").filter-menu-btn.filter-menu-btn-accept
+              span Применить
+            .filter-menu-btn.filter-menu-btn-reset
+              span Сбросить
+    .style-menu
+      .style-menu-top
+        .style-menu-name
+          span Стиль
+        .style-menu-close
+          +icon('closemenu')
+      .style-menu-top-line
+      .style-options
+        .style-options-wrap
+          ul
+            each stl in [{name: 'Неоклассика',count: 26},{name: 'Минимализм',count: 26},{name: 'Сканди',count: 26},{name: 'Лофт',count: 26},{name: 'Современный',count: 26},]
+              li
+                a(href="#").style-options-option
+                  span=stl.name
+                  span (#{stl.count})
+    block breadcrumbs
+      +breadcrumbs('Главная','Мебель для гостиной')
+    .catalog-head
+      block head
+        h1 Мебель для гостиной
+    .catalog-types
+      .swiper.type-swiper
+        .swiper-wrapper.type-swiper-wrapper
+          block swip
+            .swiper-slide.type-slide
+              a(href="#").type.type-active
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Гостиные.svg
+                .type-name
+                  span Гостиные
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Комоды.svg
+                .type-name
+                  span Комоды
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Полки.svg
+                .type-name
+                  span Полки
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Столики.svg
+                .type-name
+                  span Столики
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Тумбы.svg
+                .type-name
+                  span Тумбы
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/ТумбыподТВ.svg
+                .type-name
+                  span Тумбы под ТВ
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Шкафы.svg
+                .type-name
+                  span Шкафы
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Кресла-качалки.svg
+                .type-name
+                  span Кресла-качалки
+                .type-count
+                  span 21
+            .swiper-slide.type-slide
+              a(href="#").type
+                .type-img
+                  include ../../static/img/Мебель для гостиной/Камины.svg
+                .type-name
+                  span Камины
+                .type-count
+                  span 21
+      .type-progressbar.swiper-pagination
+    .sub-category
+      ul
+        each sub in [{name: 'Неоклассика',count: 26},{name: 'Минимализм',count: 26},{name: 'Лофт',count: 26},{name: 'Сканди',count: 26},{name: 'Современный',count: 26}]
+          li
+            a(href="#")
+              span.sub-category-name=sub.name + ' '
+              span.sub-category-count (#{sub.count})
+    .filters
+      .filters-wrap
+        .filters-btns-wrap
+          .filters-btn.filters-filter
+            .filters-icon
+              +icon('filter')
+            .filters-name
+              span Все фильтры
+          .filters-btn.filters-styles
+            .filters-icon
+              +icon('stylecards')
+            .filters-name
+              span Стиль
+        .filters-sort
+          .filters-sort-name
+            span.filters-sort-name-sort='Сортировать' + ' '
+            span по цене:
+          .filters-sort-opt
+            a(href="#")
+              span по убыв.
+            span.filters-sort-line |
+            a(href="#")
+              span по возвр.
+    .card-swiper.catalog-cards
+      +cardSwiper(false)
+    .card-swiper.catalog-cards
+      +cardSwiper(false)
+    .card-swiper.catalog-cards
+      +cardSwiper(false)
+    .card-swiper.catalog-cards
+      +cardSwiper(false)
+    .catalog-bottom
+      .catalog-bottom-tabs-wrap
+        a(href="#").catalog-bottom-btn
+          span Показать ещё
+        .catalog-bottom-tabs
+          .catalog-bottom-tabs-prev
+            +icon('catalogarrowprev')
+          ul
+            each tab in [1,2,3,4,5]
+              li
+                if tab == 1
+                  span.active-tab=tab
+                else
+                  a(href="#")
+                    span=tab
+          .catalog-bottom-tabs-next
+            +icon('catalogarrownext')
+    .catalog-bottom-text
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+  include ../chunk/components/footer

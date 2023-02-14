@@ -1,0 +1,94 @@
+@mixin xxl {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin xl-1300 {
+  @media (max-width: 1300px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin l-1150 {
+  @media (max-width: 1150px) {
+    @content;
+  }
+}
+@mixin l-1100 {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin l {
+  @media (max-width: 1014px) {
+    @content;
+  }
+}
+// TYT XXM font size menyaetsya ochti u vsex!
+@mixin xxm {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+@mixin m-950 {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+@mixin m-880 {
+  @media (max-width: 880px) {
+    @content;
+  }
+}
+@mixin m-840 {
+  @media (max-width: 840px) {
+    @content;
+  }
+}
+@mixin xm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin m-670 {
+  @media (max-width: 670px) {
+    @content;
+  }
+}
+@mixin m-640 {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin m-small {
+  @media (max-width: 560px) {
+    @content;
+  }
+}
+
+@mixin xxs-big {
+  @media (max-width: 470px) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+@mixin xxxs {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin kura {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
+}

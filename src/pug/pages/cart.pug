@@ -1,0 +1,113 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Моя корзина')
+    .page-head
+      h1 Оформление заказа
+    .cart-grid
+      .cart-items-wrap
+        .cart-item
+          .cart-item-img
+            img(src="./img/chairbig.png").cart-item-img-big
+            img(src="./img/chair.png").cart-item-img-small
+          .cart-item-names
+            .cart-item-name
+              h2 Стул барный Видар Black
+            .cart-item-color
+              +SKUColor('Черный')
+          .cart-item-volume
+            .cart-item-volume-name
+              span Размеры
+            .cart-item-volume-wrap
+              .item-card-infos-volume
+                .item-card-infos-volume-item
+                  .item-card-infos-volume-item-name
+                    span Ширина
+                  .item-card-infos-volume-item-value
+                    span 50 см
+                .item-card-infos-volume-x
+                  span x
+                .item-card-infos-volume-item
+                  .item-card-infos-volume-item-name
+                    span Длина
+                  .item-card-infos-volume-item-value
+                    span 47 см
+                .item-card-infos-volume-x
+                  span x
+                .item-card-infos-volume-item
+                  .item-card-infos-volume-item-name
+                    span Высота
+                  .item-card-infos-volume-item-value
+                    span 110 см
+          .cart-item-price
+            +price('5660')
+          .cart-item-count
+            a(href="#").cart-item-delete
+              span Удалить
+            .cart-item-count-value
+              .cart-item-count-value-wrap
+                .cart-item-count-value-btn
+                  +icon('minus')
+                .cart-item-count-value-num
+                  span 1
+                .cart-item-count-value-btn
+                  +icon('plus')
+              .cart-item-price-desc
+                +price('5660')
+      .cart-user-infos
+        .cart-user-infos-name
+          span Заполните информацию о себе
+        .cart-user-infos-wrap
+          .cart-user-infos-wrap-first
+            .cart-user-infos-input
+              label Имя
+              input(type="text")
+            .cart-user-infos-input
+              label Телефон
+                  span *
+              input(type="phone")
+            .cart-user-infos-input
+              label Почта
+              input(type="email")
+            .cart-user-infos-important
+              span.important-red *
+              span обязательно для заполнения
+            input(type="submit" value="Оформить заказ").cart-user-infos-btn.cart-user-btn
+          .cart-user-infos-wrap-second
+            .cart-user-infos-radios
+              .cart-user-infos-radios-name
+                span Выберите способ доставки
+              .cart-user-infos-radios-wrap
+                .radio-btn
+                  input(type="radio" name="deliverysposob" value="delivery" checked)
+                  label Доставка
+                .radio-btn
+                  input(type="radio" name="deliverysposob" value="samovyvoz")
+                  label Самовывоз
+            .cart-user-infos-radios-samovyvoz
+              span Адрес пункта самовывоза
+              span г. Якутск, Ул. Новопортовская, 1
+            .cart-user-infos-input.cart-user-infos-radios-delivery
+              label Адрес
+              input(type="text")
+      .cart-price
+        .cart-price-itog-wrap
+          .cart-price-itog
+            span Итого 2 товара на сумму
+          .cart-price-value
+            +price('14660')
+          .cart-price-weight
+            span Общий вес: 10 кг
+        a(href="#").cart-price-delivery
+          .cart-price-delivery-name
+            span Доставка и оплата
+          .cart-price-delivery-arrow
+            +icon('cartdeliveryarrow')
+      input(type="submit" value="Оформить заказ").cart-user-btn.cart-btn-submit
+    .item-card-line
+    .card-swiper.item-card-swiper
+      .card-swiper-name
+        h2 Похожие товары
+      +cardSwiper(false,true)
+  include ../chunk/components/footer

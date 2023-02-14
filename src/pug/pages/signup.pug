@@ -1,0 +1,28 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Мой кабинет','Персональные данные')
+    .page-head
+      h1 Персональные данные
+    .signin-wrap
+      +linkTabs([{name: "Личный кабинет",active: true},{name: "Моя скидка",active: false},{name: "Мои заказы",active: false},{name: "Адреса доставки",active: false}])
+      .lk-card
+        .lk-card-inside
+          .lk-card-name
+            span Регистрация
+          .signup-card-text
+            p На указанный в форме e-mail придет запрос на подтверждение регистрации.
+          .input-two-column-wrap
+            each input in [{name: "Имя",type: "text"},{name: "Фамилия",type: "text"},{name: "Email",type: "email"},{name: "Мобильный телефон",type: "phone"},{name: "Новый пароль",type: "password"},{name: "Подтверждение нового пароля",type: "password"},{name: "Введите код с картинки",type: "text"}]
+              .input-std
+                label=input.name
+                  span.input-red *
+                input(type=input.type)
+            .recapcha.signup-recapcha
+          .important-text
+            span.input-red *
+            span обязательно для заполнения
+        .signin-btns
+          input(type="submit" value="Зарегистрироваться").signin-btn
+  include ../chunk/components/footer

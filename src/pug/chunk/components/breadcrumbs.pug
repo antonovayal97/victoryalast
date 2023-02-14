@@ -1,0 +1,13 @@
+mixin breadcrumbs(...names)
+  nav.breadcrumbs(aria-label="You are here:", itemprop="http://schema.org/breadcrumb", itemscope, itemtype="http://schema.org/BreadcrumbList")
+    .breadcrumbs-wrapper
+      ul
+        each name, index in names
+          li.breadcrumbs-item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+            if index < names.length - 1
+              a.breadcrumbs-link(href='#', title=name, itemprop="url")
+                span(itemprop=name)= name
+                .breadcrumbs-arrow
+                  +icon('breadcrumbsarrow')
+            else
+              span(itemprop=name)= name

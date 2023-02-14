@@ -1,0 +1,31 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Мой кабинет','Персональные данные')
+    .page-head
+      h1 Персональные данные
+    .signin-wrap
+      +linkTabs([{name: "Личный кабинет",active: true},{name: "Моя скидка",active: false},{name: "Мои заказы",active: false},{name: "Адреса доставки",active: false}])
+      .lk-card
+        .lk-card-inside
+          .lk-card-name
+            span Авторизуйтесь
+          .signin-inputs
+            .input-std
+              label Email
+              input(type="email")
+            .input-std
+              label Ваш пароль
+              input(type="password")
+          .signin-bottom
+            .radio-btn.signin-bottom-checkbox
+              input(type="checkbox" name="zapomnit" value="yes")
+              label Запомнить меня
+            a(href="#").signin-bottom-forgot
+              span Забыли пароль?
+        .signin-btns
+          input(type="submit" value="Войти в профиль").signin-btn
+          a(href="#").signin-btn.signin-signup-btn
+            span Пройти регистрацию
+  include ../chunk/components/footer

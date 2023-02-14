@@ -1,0 +1,122 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Гостиная','Стул барный Видар Black')
+    .item-card-grid-container
+      .swiper.item-card-img-wrap
+        .swiper-wrapper
+          .swiper-slide
+            .item-card-img
+              img(src="./img/chairbig.png").item-card-img-big
+              img(src="./img/chair.png").item-card-img-small
+          .swiper-slide
+            .item-card-img
+              img(src="./img/chairbig.png").item-card-img-big
+              img(src="./img/chair.png").item-card-img-small
+          .swiper-slide
+            .item-card-img
+              img(src="./img/chairbig.png").item-card-img-big
+              img(src="./img/chair.png").item-card-img-small
+        .swiper-pagination.item-card-swiper-pagination
+      .item-card-desc
+        p Принимая во внимание показатели успешности, современная методология разработки требует определения и уточнения анализа существующих паттернов поведения. Как уже неоднократно упомянуто, интерактивные прототипы являются только методом политического участия и представлены в исключительно положительном свете. Прежде всего, сложившаяся структура организации предполагает независимые способы реализации поэтапного и последовательного развития общества.
+      .item-card-infos
+        .item-card-infos-category
+          h1 Видар
+        .item-card-infos-name
+          span Стул барный Видар Black
+        .item-card-infos-prices-n-count
+          .item-card-infos-price
+            .item-card-infos-price-name
+              span Цена:
+            .item-card-infos-price-value.price-number
+              span.item-card-infos-price-value-num 5660
+          .item-card-infos-count
+            .item-card-infos-count-name
+              span В наличии:
+            .item-card-infos-count-value
+              span.item-card-infos-count-value-num 1
+              span.item-card-infos-count-value-text шт
+        +SKUColor('Розовый','Алый','Зеленый','Черный','Коричневый','Синий')
+        .item-card-infos-colors
+        .item-card-infos-btns
+          .item-card-infos-btn-cart.item-card-infos-btn
+            span В корзину
+          a(href="#" data-hystmodal="#oneclick").item-card-infos-btn-one-click.item-card-infos-btn
+            span Купить в 1 клик
+        .item-card-infos-accord.accord
+          .item-card-infos-accord-outside.accord-outside
+            .item-card-infos-accord-outside-text
+              span Характеристики
+            .accord-arrow
+              +icon('acc_arrow')
+          .accord-inside
+            .item-card-infos-params
+              .item-card-infos-volume
+                .item-card-infos-volume-item
+                  .item-card-infos-volume-item-name
+                    span Ширина
+                  .item-card-infos-volume-item-value
+                    span 50 см
+                .item-card-infos-volume-x
+                  span x
+                .item-card-infos-volume-item
+                  .item-card-infos-volume-item-name
+                    span Длина
+                  .item-card-infos-volume-item-value
+                    span 47 см
+                .item-card-infos-volume-x
+                  span x
+                .item-card-infos-volume-item
+                  .item-card-infos-volume-item-name
+                    span Высота
+                  .item-card-infos-volume-item-value
+                    span 110 см
+              .item-card-infos-details
+                each detail in [{name: 'Материал корпуса: ',value: 'Металл'},{name: 'Гарантия: ',value: '18 месяцев'},{name: 'Стиль: ',value: 'Современный'},{name: 'Коллекция: ',value: 'Делтон'},]
+                  .item-card-infos-detail
+                    span.item-card-infos-detail-name=detail.name
+                    span.item-card-infos-detail-value=detail.value
+        a(href="#").item-card-infos-delivery
+          span Доставка и оплата
+    .item-card-line
+    .card-swiper.item-card-swiper
+      .card-swiper-name
+        h2 Похожие товары
+      +cardSwiper(false,true)
+  include ../chunk/components/footer
+  div(class="hystmodal" id="oneclick" aria-hidden="true")
+    .hystmodal__wrap
+      div(class="hystmodal__window hystmodal__window-630" role="dialog" aria-modal="true")
+        button(data-hystclose class="hystmodal__close")
+          | Закрыть
+        .modal-wrap.modal-delivery.modal
+          .modal-name
+            span Купить в 1 клик
+          .modal-delivery-text
+            span Пожалуйста, оставьте контактные данные, чтобы наш менеджер смог связаться с Вами для оформления заказа.
+          .input-std.modal-input
+            label ФИО
+              span.important-red *
+            input(type="text")
+          .input-std.modal-input
+            label Телефон
+            input(type="phone")
+          .input-std.modal-input
+            label E-mail
+              span.important-red *
+            input(type="email")
+          .input-std.modal-input
+            label Текст сообщения
+              span.important-red *
+            textarea(name="text" row="3" cols="50")
+          .modal-recapcha
+          .input-std.modal-input
+            label Введите символы, изображенные на картинке*
+            input(type="text")
+          .cart-user-infos-important.modal-important
+            span.important-red *
+            span обязательно для заполнения
+          .modal-btns
+            input(type="submit" value="Отправить").signin-btn.modal-btn

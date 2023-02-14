@@ -1,0 +1,98 @@
+header.header-main
+  .header-with-line
+    .top-header
+      .top-header-first
+        a(href="./").logo
+          include ../../../static/img/logo.svg
+        .links
+          ul
+            li
+              a(href="./contacts.html")='Контакты'
+            li
+              a(href="#")='Мебель на заказ'
+            li
+              a(href="#" data-hystmodal="#deliveryulus")='Доставка в улус'
+      .top-header-second
+        .contact
+          a(href="tel:+74112401111") Якутск +7(4112) 40-11-11
+        .top-header-icons
+          a(href="#").icon-link.search-link
+            +icon('search')
+          //
+            <a href="#" data-hystmodal="#signin" class="icon-link account-link"></a>
+          a(href="./account.html").icon-link.account-link
+            +icon('user')
+          a(href="./cart.html").icon-link.cart-link
+            .icon-link-circle
+              span 2
+            +icon('cart')
+          .icon-link.menu-link
+            +icon('menubtn')
+  .header-with-line
+    .bottom-header
+      .header-menu
+        ul
+          each link in [{name:'Мягкая мебель',url: 'catalog1'},{name: 'Прихожая',url: 'catalog2'},{name: 'Гостинная', url: 'catalog'},{name: 'Кухня',url:'catalog3'},{name:'Спальня', url:'catalog4'},{name:'Детская мебель',url:'catalog5'},{name:'Офисная мебель',url:'catalog6'},{name:'Акции',url:'index'}]
+            li
+              a(href="./" + link.url + ".html")=link.name
+  .menu-slided
+    .menu-slided-search
+      input(type="text" placeholder="Поиск")
+      .level-btn.menu-close
+        +icon('closemenu')
+    .menu-slided-items
+      ul
+        li
+          a(href="#" class="active-slider-menu active-slider-menu-active") Меню
+        li
+          a(href="#" class="active-slider-menu-contact") Контакты
+        li
+          a(href="#") Мебель на заказ
+        li
+          a(href="#" data-hystmodal="#deliveryulus") Доставка в улусы
+    .menu-slided-ul-acc-wrap
+      ul.menu-slided-ul
+        each menuslide in [{name:'Мягкая мебель',url: 'catalog1'},{name: 'Прихожая',url: 'catalog2'},{name: 'Гостинная', url: 'catalog'},{name: 'Кухня',url:'catalog3'},{name:'Спальня', url:'catalog4'},{name:'Детская мебель',url:'catalog5'},{name:'Офисная мебель',url:'catalog6'},{name:'Акции',url:'index'}]
+          li.first-level
+            .first-level-name
+              span=menuslide.name
+              .level-name-icon
+                +icon('arrowmenuright')
+            .second-level
+              .second-level-header
+                .level-btn.back-to-first
+                  +icon('circlearrow')
+                .level-btn.menu-close
+                  +icon('closemenu')
+              a(href="./" + menuslide.url + ".html").second-level-name
+                span=menuslide.name
+                .level-name-icon
+                  +icon('arrowmenuright')
+              ul.menu-slided-ul
+                each jj in [1,2,3,4,5,6,7,8,9,10]
+                  li
+                    a(href="#").second-level-items
+                      span=menuslide.name + jj
+                      .level-name-icon
+                        +icon('arrowmenuright')
+      a(href="./account.html").menu-slided-account-link
+        .first-level-name
+          span Личный кабинет
+          .first-level-name-icon
+            +icon('arrowmenuright')
+    .menu-slided-contacts
+      .menu-slided-contact-wrap
+        .menu-slided-contact-name
+          span Телефон
+        .menu-slided-contact-value
+          a(href="tel:+74112401111") +7 4112 40-11-11
+      .menu-slided-contact-wrap
+        .menu-slided-contact-name
+          span Эл. почта
+        .menu-slided-contact-value
+          span Info@victoria-mebel.ru
+      .menu-slided-contact-wrap
+        a(href="#").menu-slided-contact-link
+          span Написать нам
+        a(href="#").menu-slided-contact-link
+          span Сотрудничество

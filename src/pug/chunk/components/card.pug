@@ -1,0 +1,41 @@
+mixin card(name="Стул",img="./img/chair.png",price='5660')
+  .card-wrap
+    .card-item
+      .card-top
+        a(href="./item-card.html")
+          .card-img
+            img(src=img)
+        .card-name
+          span=name
+        .card-info
+          .card-info-desc
+            .card-info-price
+              +price(price)
+          .card-info-icon
+            +icon('cart')
+      .card-bottom
+        .card-info-count
+          span В наличии: 1 шт
+        .card-sizes-wrap
+          .card-size
+            .card-size-name
+              span Ширина
+            .card-size-value
+              span 50 см
+          .card-size-x
+            span x
+          .card-size
+            .card-size-name
+              span Длина
+            .card-size-value
+              span 47 см
+          .card-size-x
+            span x
+          .card-size
+            .card-size-name
+              span Высота
+            .card-size-value
+              span 110 см
+        a(href="./item-card.html")
+          .card-button
+            span Подробнее

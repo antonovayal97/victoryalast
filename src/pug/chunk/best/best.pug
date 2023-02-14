@@ -1,0 +1,17 @@
+.best
+  .subheader
+    h2 Почему покупать лучше у нас?
+  .best-wrap
+    .best-swiper-wrap
+      .swiper.best-swiper
+        .swiper-wrapper
+          each val in [{img: 'benef1.png',name: 'Команда профессионалов',value: 'Компания "Виктория" - это команда профессионалов, которая уже более 24 лет'},{img: 'benef2.png',name: 'У НАС ВЫ НАЙДЁТЕ ТО, ЧТО ВЫ ИЩИТЕ',value: 'Мы предлагаем лучшее коллекции от ведущих производителей рынка'},{img: 'benef3.png',name: 'Качество',value: 'Нашим приорететом является обслуживания и качество предлагаемой продукции.'},{img: 'benef4.png',name: 'Дизайн',value: 'Мы предлогаем только самые востребованные и актуальные модели.'},{img: 'benef5.png',name: 'Опыт',value: 'За 24 года работы мы проделали длинный путь '}]
+            .swiper-slide.best-slide
+              .best-card
+                .best-img
+                  img(src="img/" + val.img alt="")
+                .best-card-name
+                  span=val.name
+                .best-card-info
+                  span=val.value
+        .swiper-pagination.best-swiper-pagination.victorya-pagination

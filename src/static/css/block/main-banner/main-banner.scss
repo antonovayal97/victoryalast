@@ -1,0 +1,123 @@
+.main-banner
+{
+  margin: 0 -70px;
+  margin-bottom: 70px;
+  @include l
+  {
+    margin: 0 -55px;
+    margin-bottom: 70px;
+  }
+  @include xm
+  {
+    margin: 0 -15px;
+    margin-bottom: 60px;
+  }
+}
+.main-banner-swiper
+{
+
+}
+.main-banner-swiper-wrapper
+{
+  margin-bottom: 38px;
+}
+.victorya-pagination
+{
+  bottom: 0 !important;
+  span
+  {
+    width: 12px;
+    height: 12px;
+    margin: 0 7.5px;
+    @include xm
+    {
+      width: 10px;
+      height: 10px;
+      margin: 0 6px;
+    }
+  }
+  .swiper-pagination-bullet-active
+  {
+    background-color: $colorGreen
+  }
+}
+.banner
+{
+  height: 420px;
+  width: 100%;
+  // background-color: gray;
+  @include xm
+  {
+    height: 580px;
+  }
+}
+.banner-img
+{
+  width: 100%;
+  height: 99%;
+  img
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.banner-text-wrap
+{
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  left: 180px;
+  @include l
+  {
+    left: 55px;
+  }
+  @include xm
+  {
+    top: 80px;
+    transform: translate(0,0);
+    left: 15px;
+  }
+}
+.banner-text
+{
+  margin-bottom: 15px;
+  span
+  {
+    font-size: 30px;
+  }
+  @include xm
+  {
+    span
+    {
+      font-size: 24px;
+    }
+  }
+}
+.banner-link
+{
+  margin-top: 30px;
+  a
+  {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+.main-banner-swiper-buttons-next
+{
+  right: 23px;
+  top: calc(50% - 30px);
+  @include l
+  {
+    display: none
+  }
+}
+.main-banner-swiper-buttons-prev
+{
+  left: 23px;
+  top: calc(50% - 30px);
+  @include l
+  {
+    display: none
+  }
+}

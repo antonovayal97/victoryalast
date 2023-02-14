@@ -1,0 +1,80 @@
+include ../chunk/icons/icons.pug
+include ../chunk/price/price.pug
+include ../chunk/card-swiper/card-swiper.pug
+include ../chunk/link-tabs/link-tabs.pug
+include ../chunk/components/breadcrumbs.pug
+include ../chunk/components/SKUColor.pug
+include ../chunk/components/card.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no")
+    title Виктория Мебель
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
+    link(rel="stylesheet", href="libs/hystmodal.min.css")
+    link(rel="stylesheet", href="css/main.css")
+    block styles
+    script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js")
+    script(src='libs/hystmodal.min.js')
+  body
+    block page
+    div(class="hystmodal" id="deliveryulus" aria-hidden="true")
+      .hystmodal__wrap
+        div(class="hystmodal__window" role="dialog" aria-modal="true")
+          button(data-hystclose class="hystmodal__close")
+            | Закрыть
+          .modal-wrap.modal-delivery
+            .modal-name
+              span Заказать доставку в улус
+            .modal-delivery-text
+              span Пожалуйста, оставьте контактные данные, чтобы наш менеджер смог связаться с Вами для оформления заказа.
+            .input-std.modal-input
+              label ФИО
+                span.important-red *
+              input(type="text")
+            .input-std.modal-input
+              label Телефон
+                span.important-red *
+              input(type="phone")
+            .input-std.modal-input
+              label E-mail
+              input(type="email")
+            .modal-recapcha
+            .input-std.modal-input
+              label Введите символы, изображенные на картинке*
+              input(type="text")
+            .radio-btn.modal-radio
+              input(type="checkbox" name="soglasie" value="yes")
+              label Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных
+            .cart-user-infos-important.modal-important
+              span.important-red *
+              span обязательно для заполнения
+            .modal-btns
+              input(type="submit" value="Отправить").signin-btn.modal-btn
+    div(class="hystmodal" id="signin" aria-hidden="true")
+      .hystmodal__wrap
+        div(class="hystmodal__window hystmodal__window-630" role="dialog" aria-modal="true")
+          button(data-hystclose class="hystmodal__close")
+            | Закрыть
+          .modal-wrap.modal-delivery
+            .modal-name
+              span Авторизуйтесь
+            .input-std.modal-input
+              label E-mail
+              input(type="text")
+            .input-std.modal-input
+              label Пароль
+              input(type="password")
+            .modal-radio-wrap
+              .radio-btn.modal-radio
+                input(type="checkbox" name="soglasie" value="yes")
+                label Запомнить меня
+              a(href="#")
+                span Забыли пароль?
+            .modal-btns
+              input(type="submit" value="Войти в профиль").signin-btn.modal-btn
+              a(href="#").signin-btn.modal-btn.modal-btn-signup
+                span Пройти регистрацию
+    script(src="js/common.js")

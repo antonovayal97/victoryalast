@@ -1,0 +1,54 @@
+extends ../layout/catalog
+block breadcrumbs
+  +breadcrumbs('Главная','Мебель для кухни')
+block head
+  h1 Мебель для кухни
+block swip
+  .swiper-slide.type-slide
+    a(href="#").type.type-active
+      .type-img
+        include ../../static/img/Мебель для кухни/Кухни.svg
+      .type-name
+        span Кухни
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мебель для кухни/МодульныеКухни.svg
+      .type-name
+        span Модульные кухни
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мебель для кухни/Столы.svg
+      .type-name
+        span Столы
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мебель для кухни/Стулья.svg
+      .type-name
+        span Стулья
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мебель для кухни/ОбеденныеГруппы.svg
+      .type-name
+        span Обеденные группы
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мебель для кухни/СопутствующиеТовары.svg
+      .type-name
+        span Сопутствующие товары
+      .type-count
+        span 21

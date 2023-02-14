@@ -1,0 +1,324 @@
+$transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+$fxs: 12px;
+$fs: 14px;
+$fm: 16px;
+$fl: 20px;
+$colorGreen: #00806A;
+$colorGold: #DFB141;
+@font-face {
+  font-family: "GothamPro";
+  src: url("../fonts/GothamPro.ttf");
+}
+@import "./media-mixin.scss";
+@import "./reset.scss";
+@import "./block/components-style/root.scss";
+@import "./block/components-style/header.scss";
+@import "./block/components-style/_icons.scss";
+@import "./block/components-style/footer.scss";
+@import "./block/components-style/breadcrumbs.scss";
+@import "./block/catalog-types/catalog-types.scss";
+@import "./block/card-swiper/card-swiper.scss";
+@import "./block/best/best.scss";
+@import "./block/main-banner/main-banner.scss";
+@import "./block/components-style/card.scss";
+@import "./block/catalog.scss";
+@import "./block/item-card.scss";
+@import "./block/cart.scss";
+@import "./block/contacts.scss";
+@import "./block/job.scss";
+@import "./block/link-tabs/link-tabs.scss";
+@import "./block/signin.scss";
+@import "./block/signup.scss";
+@import "./block/account.scss";
+@import "./block/restoring.scss";
+@import "./block/static.scss";
+@import "./block/pred/pred.scss";
+@import "./block/components-style/SKUColor.scss";
+*
+{
+  font-family: "GothamPro", sans-serif !important
+}
+.icon
+{
+  width: 24px;
+  height: 24px;
+// use
+// {
+//   fill: red;
+//   stroke: red
+// }
+}
+.index-card
+{
+  margin-bottom: 70px;
+  @include xm
+  {
+    margin-bottom: 60px;
+  }
+}
+.subheader
+{
+  margin-bottom: 40px;
+  h2
+  {
+    font-size: 24px;
+    @include xm
+    {
+      font-size: 18px;
+    }
+  }
+}
+.index-main
+{
+  max-width: 1440px;
+  padding: 0 70px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  padding-top: 164px;
+  @include l
+  {
+    padding: 0 55px;
+    padding-bottom: 80px;
+    padding-top: 164px;
+  }
+  @include xm
+  {
+    padding: 0 15px;
+    padding-bottom: 60px;
+    padding-top: 61px;
+  }
+}
+//
+// Аккордион
+.accord-outside
+{
+  cursor: pointer;
+}
+.accord-inside
+{
+  height: 0;
+  overflow: hidden;
+}
+.accord-inside-active
+{
+  height: 100% !important
+}
+.accord-arrow
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accord-arrow-active
+{
+  transform: rotateZ(180deg);
+}
+
+.radio-btn
+{
+  display: flex;
+  align-items: center;
+  label
+  {
+    flex: 1;
+    margin-left: 15px;
+  }
+  input
+  {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+ color: currentColor;
+ width: 24px;
+ height: 24px;
+ border: 1px solid #D4D4D4;
+ border-radius: 50%;
+ display: grid;
+  place-content: center;
+  cursor: pointer;
+  &::before
+  {
+    content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+  }
+  &:checked::before {
+  transform: scale(1);
+}
+  }
+}
+.input-two-column-wrap
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  @include xm
+  {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+}
+.input-std
+{
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  label
+  {
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input,textarea
+  {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 14px 15px;
+  }
+  textarea
+  {
+    height: 93px;
+    @include xm
+    {
+      height: 45px;
+    }
+  }
+  @include xm
+  {
+    width: 100%;
+    label
+    {
+      font-size: 12px;
+    }
+  }
+}
+.input-red
+{
+  color: red;
+}
+.lk-card
+{
+  flex: 1;
+  padding: 40px;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  @include l
+  {
+    padding: 30px;
+  }
+  @include xm
+  {
+    padding: 0;
+    border: none;
+  }
+}
+.lk-card-inside
+{
+  @include xm
+  {
+    border-radius: 3px;
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+  }
+}
+.lk-card-name
+{
+  font-size: 24px;
+  margin-bottom: 30px;
+  @include xm
+  {
+    font-size: 14px;
+  }
+}
+.page-head
+{
+  margin-bottom: 40px;
+  h1
+  {
+    font-size: 24px
+  }
+  @include xm
+  {
+    display: none
+  }
+}
+.price-number
+{
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  span::after
+  {
+    margin-left: 5px;
+    display: inline-flex;
+    content: '';
+
+            /* Using the background-image and
+               its related properties to add
+               the SVG content */
+    background-image: url('../img/rub.svg');
+    background-size: 14px 14px;
+    height: 14px;
+    width: 14px;
+    @include xm
+    {
+      margin-left: 3px;
+      background-size: 12px 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+}
+.icon-cartdeliveryarrow
+{
+  width: 5px;
+  height: 10px;
+}
+.icon-carousel_nav
+{
+  width: 32px;
+  height: 32px;
+}
+.icon-closemenu
+{
+  width: 32px;
+  height: 32px;
+  @include xm
+  {
+    width: 30px;
+    height: 30px;
+  }
+}
+.icon-arrowfooter
+{
+  width: 16px;
+  height: 12px;
+}
+.icon-arrowmenuright
+{
+  width: 6px;
+  height: 12px;
+}
+.icon-acc_arrow
+{
+  width: 11px;
+  height: 5px;
+}
+.hystmodal
+{
+
+}

@@ -1,0 +1,85 @@
+.catalog-types
+{
+  // @include xm
+  // {
+  //   margin: 0 -15px;
+  // }
+  margin-bottom: 55px;
+  user-select: none;
+}
+
+.type
+{
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.type-active
+{
+  .type-img
+  {
+    svg
+    {
+      path, rect, line, ellipse, circle
+      {
+        stroke: $colorGreen;
+        stroke-width: 1px;
+      }
+    }
+  }
+}
+.type-img
+{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  &:hover
+  {
+    svg
+    {
+      path, rect, line, ellipse, circle
+      {
+        stroke: $colorGreen;
+        fill: none
+      }
+    }
+  }
+  svg
+  {
+    height: 100%;
+    width: 100%;
+    path, rect, line, ellipse, circle
+    {
+      fill: none;
+      stroke: #353535;
+      stroke-width: 1px;
+    }
+  }
+  margin-bottom: 20px;
+}
+.type-img-fixed
+{
+  svg
+  {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    stroke: #353535;
+    path, rect, line, ellipse, circle
+    {
+      stroke-width: 0.5px;
+    }
+  }
+}
+.type-name
+{
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+.type-slide
+{
+  width: 80px;
+}

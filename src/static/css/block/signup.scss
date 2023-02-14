@@ -1,0 +1,20 @@
+.signup-recapcha
+{
+  margin: 0;
+  align-items: flex-start;
+}
+.important-text
+{
+  margin-top: 20px;
+}
+.signup-card-text
+{
+  margin-top: -15px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  @include xm
+  {
+    margin-top: -20px;
+  }
+}

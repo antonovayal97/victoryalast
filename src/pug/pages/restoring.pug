@@ -1,0 +1,17 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Вход на сайт')
+    .page-head
+      h1 Вход на сайт
+    .restoring-card.lk-card
+      .lk-card-name.restoring-card-name
+        span Востановление доступа к аккаунту
+      .restoring-text
+        span Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.
+      .input-std.restoring-input
+        label Введите E-mail который испоользовали при регистрации
+        input(type="password")
+      input(type="submit" value="Войти в профиль").signin-btn
+  include ../chunk/components/footer

@@ -1,0 +1,282 @@
+.item-card-grid-container
+{
+  display: grid;
+  margin-bottom: 70px;
+  grid-template-columns: 1fr 310px;
+  grid-template-rows: auto;
+  grid-column-gap: 70px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    "itemCardImg itemCardInfos"
+    "itemCardDesc itemCardInfos";
+    @include xm
+    {
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "itemCardImg"
+        "itemCardInfos"
+        "itemCardDesc";
+    }
+    @include l
+    {
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+}
+.item-card-img-wrap
+{
+  grid-area: itemCardImg;
+  margin-bottom: 55px;
+  height: calc(100% + 25px);
+  @include xm
+  {
+    margin-top: 5px;
+  }
+}
+.item-card-img
+{
+  padding: 65px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include xm
+  {
+    padding: 0;
+  }
+}
+.item-card-img-big
+{
+  width: calc(100% - 200px);
+  @include xm
+  {
+    display: none;
+  }
+}
+.item-card-img-small
+{
+  display: none;
+  @include xm
+  {
+    width: 100%;
+    display: block;
+  }
+}
+.item-card-swiper-pagination
+{
+  span
+  {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px !important;
+  }
+  .swiper-pagination-bullet-active
+  {
+    background-color: $colorGreen
+  }
+}
+.item-card-desc
+{
+  grid-area: itemCardDesc;
+  font-size: $fm;
+  line-height: 1.4;
+}
+.item-card-infos
+{
+  grid-area: itemCardInfos;
+}
+.item-card-infos-category
+{
+  margin-bottom: 10px;
+  h1
+  {
+    font-size: 35px
+  }
+}
+.item-card-infos-name
+{
+  margin-bottom: 30px;
+}
+.item-card-infos-prices-n-count
+{
+  display: flex;
+}
+.item-card-infos-price
+{
+  display: flex;
+  margin-right: 25px;
+}
+.item-card-infos-price-name
+{
+  margin-right: 5px;
+}
+.item-card-infos-price-value
+{
+
+}
+.item-card-infos-price-value-num
+{
+  font-weight: 700;
+  margin-right: 5px;
+}
+.item-card-infos-price-value-symbol
+{
+  font-weight: 700;
+}
+.item-card-infos-count
+{
+  display: flex;
+}
+.item-card-infos-count-name
+{
+  margin-right: 5px;
+}
+.item-card-infos-count-value
+{
+
+}
+.item-card-infos-count-value-text
+{
+  margin-left: 5px;
+}
+.item-card-infos-btns
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.item-card-infos-btn
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 50px;
+  border-radius: 5px;
+  span
+  {
+    color: #fff;
+    // font-weight: 700;
+  }
+  @include xm
+  {
+    width: auto;
+  }
+}
+.item-card-infos-btn-cart
+{
+  cursor: pointer;
+background-color: $colorGreen
+}
+.item-card-infos-btn-one-click
+{
+  background-color: $colorGold
+}
+.item-card-infos-accord
+{
+
+}
+.item-card-infos-accord-outside
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+}
+.item-card-infos-delivery
+{
+  display: none;
+  padding: 20px 0;
+  border-bottom: 1px solid #E3E3E3;
+  @include xm
+  {
+    display: block;
+
+  }
+}
+.item-card-infos-params
+{
+  margin-top: 20px;
+}
+.item-card-infos-volume
+{
+  display: flex;
+  line-height: 20px;
+}
+.item-card-infos-volume-item
+{
+  text-align: center;
+}
+.item-card-infos-volume-item-name
+{
+  span
+  {
+    color: #7C7C7C
+  }
+}
+.item-card-infos-volume-item-value
+{
+
+}
+.item-card-infos-volume-x
+{
+  display: flex;
+  align-items: flex-end;
+  width: 7px;
+  margin: 0 23px;
+
+}
+.item-card-infos-details
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  @include xm
+  {
+    border-bottom: 1px solid #E3E3E3;
+    padding-bottom: 15px;
+  }
+}
+.item-card-infos-detail
+{
+
+}
+.item-card-infos-detail-name
+{
+  color: #7C7C7C
+}
+.item-card-infos-detail-value
+{
+
+}
+
+.item-card-line
+{
+  margin: 0 calc((100% - 100vw)/2);
+  width: 100vw;
+  height: 1px;
+  background-color: #e3e3e3;
+  @include l
+  {
+    margin: 0 -55px;
+  }
+  @include xm
+  {
+    width: 100%;
+    margin: 0;
+  }
+}
+.item-card-swiper
+{
+  margin-top: 70px;
+  @include l
+  {
+    margin-top: 50px;
+  }
+}

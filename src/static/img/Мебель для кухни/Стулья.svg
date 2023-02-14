@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 47C19 45.3431 20.3431 44 22 44H34C35.6568 44 37 45.3431 37 47V48H19V47Z" stroke="" stroke-width="2"/>
+<path d="M44 47C44 45.3431 45.3431 44 47 44H59C60.6568 44 62 45.3431 62 47V48H44V47Z" stroke="" stroke-width="2"/>
+<rect width="14" height="2" rx="1" transform="matrix(0 -1 -1 0 20 61)" fill=""/>
+<rect width="14" height="2" rx="1" transform="matrix(0 -1 -1 0 45 61)" fill=""/>
+<rect width="4" height="2" transform="matrix(0 -1 -1 0 25 45)" fill=""/>
+<rect width="4" height="2" transform="matrix(0 -1 -1 0 50 45)" fill=""/>
+<rect width="4" height="2" transform="matrix(0 -1 -1 0 33 45)" fill=""/>
+<rect width="4" height="2" transform="matrix(0 -1 -1 0 58 45)" fill=""/>
+<path d="M21 28C21 24.134 24.134 21 28 21C31.866 21 35 24.134 35 28V39.9535C35 40.5315 34.5315 41 33.9535 41H22.0465C21.4685 41 21 40.5315 21 39.9535V28Z" stroke="" stroke-width="2"/>
+<path d="M46 28C46 24.134 49.134 21 53 21C56.866 21 60 24.134 60 28V39.9535C60 40.5315 59.5315 41 58.9535 41H47.0465C46.4685 41 46 40.5315 46 39.9535V28Z" stroke="" stroke-width="2"/>
+<rect width="14" height="2" rx="1" transform="matrix(0 -1 -1 0 38 61)" fill=""/>
+<rect width="14" height="2" rx="1" transform="matrix(0 -1 -1 0 63 61)" fill=""/>
+</svg>

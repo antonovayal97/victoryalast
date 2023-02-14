@@ -1,0 +1,23 @@
+mixin cardSwiper(btn = true,progress = false)
+  .card-swiper-wrap
+    .swiper.item-swiper
+      .swiper-wrapper.item-swiper-wrapper
+        .swiper-slide.item-slide
+          +card()
+        .swiper-slide.item-slide
+          +card('Стул Либра White','./img/white.png','9000')
+        .swiper-slide.item-slide
+          +card('Кухонный стол Эрвиг Белый','./img/ervig.png','9990')
+        .swiper-slide.item-slide
+          +card('Письменный стол Бервин Light','./img/bervin.png','7600')
+        .swiper-slide.item-slide
+          +card('Диван Каир Textile Grey','./img/gray.png','15660')
+    if progress
+      .item-progressbar-visible.swiper-pagination
+    else
+      .item-progressbar.swiper-pagination
+    if btn
+      .swiper-button-next.swiper-buttons.swiper-buttons-next
+        +icon('carousel_nav')
+      .swiper-button-prev.swiper-buttons.swiper-buttons-prev
+        +icon('carousel_nav')

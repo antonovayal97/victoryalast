@@ -1,0 +1,28 @@
+extends ../layout/app
+block page
+  include ../chunk/components/header
+  main.index-main
+    +breadcrumbs('Главная','Контакты')
+    .page-head
+      h1 Вакансии
+    .job-main
+      .job-text
+        p Хочешь стать частью нашей дружной команды и помогать людям создавать тепло и уют?
+        p Заполни анкету ниже или отправь своё резюме на personal@victoria-mebel.ru
+        p Анкета соискателя
+      .job-main-wrap
+        .input-two-column-wrap
+          each job in [{name: 'ФИО',type: 'text'},{name: 'Электронный адрес',type: 'email'},{name: 'Дата рождения',type: 'text'},{name: 'Семейное положение, дети',type: 'text'},{name: 'Телефон',type: 'number'},{name: 'Email',type: 'email'},{name: 'Адрес фактического проживания',type: 'text'},{name: 'Вакансия, на которую претендуете',type: 'text'},{name: 'Желаемая заработная плата',type: 'text'},{name: 'Образование/курсы',type: 'text'},{name: 'Опыт работы',type: 'text'},{name: 'Ключевые навыки',type: 'text'},{name: 'Достижения в личной жизни или на работе',type: 'text'},{name: 'Ваши сильные и слабые стороны',type: 'text'},{name: 'Есть ли у вас долги/долговые обязательства (алименты, кредиты, исполнительный лист и т.п.)',type: 'text'},{name: 'Если есть, то укажите сумму ежемесячных выплат',type: 'text'},{name: 'Хобби',type: 'text'}]
+            .input-std
+              label=job.name
+              input(type=job.type)
+      .recapcha
+      .input-std
+        label Введите символы, изображённые на картинке: *
+        input(type="text")
+      .job-radio
+        .radio-btn
+          input(type="checkbox" name="soglasie" value="yes")
+          label Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных.
+      input(type="submit" value="Отправить").job-btn
+  include ../chunk/components/footer

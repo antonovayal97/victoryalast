@@ -1,0 +1,46 @@
+extends ../layout/catalog
+block breadcrumbs
+  +breadcrumbs('Главная','Мягкая мебель')
+block head
+  h1 Мягкая мебель
+block swip
+  .swiper-slide.type-slide
+    a(href="#").type.type-active
+      .type-img
+        include ../../static/img/Мягкая мебель/ДиваныПрямые.svg
+      .type-name
+        span Диваны прямые
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мягкая мебель/ДиваныУгловые.svg
+      .type-name
+        span Диваны угловые
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мягкая мебель/Кресла.svg
+      .type-name
+        span Кресла
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img.type-img-fixed
+        include ../../static/img/Мягкая мебель/Кушетки.svg
+      .type-name
+        span Кушетки, софы и тахты
+      .type-count
+        span 21
+  .swiper-slide.type-slide
+    a(href="#").type
+      .type-img
+        include ../../static/img/Мягкая мебель/Пуфы.svg
+      .type-name
+        span Пуфы
+      .type-count
+        span 21

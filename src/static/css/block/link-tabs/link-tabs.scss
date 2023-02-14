@@ -1,0 +1,33 @@
+.link-tabs-wrap
+{
+  width: 310px;
+  ul
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  a
+  {
+    span
+    {
+      display: block;
+      padding: 20px;
+      font-size: 16px;
+    }
+  }
+  @include xm
+  {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.link-tabs-active-tab
+{
+  font-size: 16px;
+  display: block;
+  padding: 20px;
+  background-color: $colorGreen;
+  border-radius: 5px;
+  color: #fff
+}

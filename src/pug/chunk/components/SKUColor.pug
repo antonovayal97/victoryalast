@@ -1,0 +1,21 @@
+mixin SKUColor(...colors)
+  .sku
+    .sku-name
+      span Цвет стула
+    .sku-wrap
+      if colors.length == 1
+        .sku-color-circle.sku-color-circle-solo
+          img(src="./img/" + colors[0] + ".png")
+        .sku-color-name
+          span=colors[0]
+      else
+        ul
+          each color, index in colors
+            if index == 0
+              li
+                .sku-color-circle.sku-color-circle-active
+                  img(src="./img/" + color + ".png")
+            else
+              li
+                .sku-color-circle
+                  img(src="./img/" + color + ".png")

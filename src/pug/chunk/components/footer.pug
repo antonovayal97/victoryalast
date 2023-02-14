@@ -1,0 +1,87 @@
+footer
+  .footer-top
+    .footer-block.accord
+      .footer-block-name.accord-outside
+        span Контактные данные
+        .arrow-footer.accord-arrow
+          +icon('arrowfooter')
+      .footer-block-content.accord-inside
+        ul
+          li
+            .contact-info
+              .contact-info-key
+                span Телефон
+              .contact-info-value
+                a(href="tel:+74112401111")  +7 4112-40-11-11
+          li
+            .contact-info
+              .contact-info-key
+                span Эл. почта
+              .contact-info-value
+                a(href="mailto:info@victoria-mebel.ru")  Info@victoria-mebel.ru
+          li
+            a(href="#") Написать нам
+      .footer-block.socials-block-m.accord
+        .footer-block-name.accord-outside
+          span Мы в соц. сетях
+        .footer-block-socials.accord-inside
+          a(href="#")
+            +icon('whatsapp')
+          a(href="#")
+            +icon('vk')
+          a(href="#")
+            +icon('telegram')
+    .footer-block.accord
+      .footer-block-name.accord-outside
+        span Для покупателей
+        .arrow-footer.accord-arrow
+          +icon('arrowfooter')
+      .footer-block-content.accord-inside
+        ul
+          each val in ['Доставка','Сборка товара','Способ оплаты','Условия кредитования','Гарантийные обязательства','Программа лояльности','Обмен и возврат']
+            li
+              a(href="./delivery.html")=val
+    .footer-block.accord
+      .footer-block-name.accord-outside
+        span Контактные данные
+        .arrow-footer.accord-arrow
+          +icon('arrowfooter')
+      .footer-block-content.accord-inside
+        ul
+          li
+            a(href="./job.html") Вакансии
+          li
+            .contact-info
+              .contact-info-key
+                span Телефон
+              .contact-info-value
+                a(href="tel:+79142703372")  +7 914 270 33 72
+          li
+            .contact-info
+              .contact-info-key
+                span Эл. почта
+              .contact-info-value
+                a(href="mailto:personal@victoria-mebel.ru")  personal@victoria-mebel.ru
+    .footer-block.socials-block-l.accord
+      .footer-block-name.accord-outside
+        span Мы в соц. сетях
+        .arrow-footer.accord-arrow
+          +icon('arrowfooter')
+      .footer-block-socials.accord-inside
+        a(href="#")
+          +icon('whatsapp')
+        a(href="#")
+          +icon('vk')
+        a(href="#")
+          +icon('telegram')
+  .footer-width-line
+    .footer-bottom
+      .footer-botttom-block
+        span Сеть мебельных салонов "Виктория"
+        span 2014-2023 © Все права защищены |
+        span
+          a(href="#") www.victoria-mebel.ru
+      .footer-botttom-block
+        a(href="#").footer-botttom-block-link Пользовательское соглашение
+        span.footer-botttom-block-line  |
+        a(href="#").footer-botttom-block-link Политика конфиденциальности
